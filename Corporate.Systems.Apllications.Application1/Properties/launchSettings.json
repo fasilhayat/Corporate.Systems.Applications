@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Corporate.Systems.Application1": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}

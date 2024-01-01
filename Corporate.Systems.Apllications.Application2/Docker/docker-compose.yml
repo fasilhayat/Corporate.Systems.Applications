@@ -1,0 +1,10 @@
+version: '2'
+services:
+  app:
+    image: console-app2-demo
+
+  mongo:
+    image: mongo
+    restart: always
+    ports:
+      - 27017:27017
