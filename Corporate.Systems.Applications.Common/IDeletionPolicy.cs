@@ -1,7 +1,6 @@
-﻿namespace Corporate.Systems.Applications.Common
+﻿namespace Corporate.Systems.Applications.Common;
+
+public interface IDeletionPolicy
 {
-    public interface IDeletionPolicy
-    {
-        public void Delete(IDataKey key);
-    }
+    public void Delete(IDataKey key);
 }
