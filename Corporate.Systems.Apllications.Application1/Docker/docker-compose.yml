@@ -1,17 +1,24 @@
 version: '2'
 services:
-  app:
-    image: console-app-demo
-
   cache:
     image: redis:latest
     restart: always
     ports:
       - '6379:6379'
-    
+    networks:
+     - my-net
+    hostname: cache
+        
     volumes: 
       - cache:/data
+  app:
+    image: console-app-demo
+    depends_on:
+    - cache
 
 volumes:
   cache:
     driver: local
+
+networks:
+  my-net:

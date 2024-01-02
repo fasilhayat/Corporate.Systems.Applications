@@ -11,7 +11,7 @@ IDataKey dataKey = new DataKey("MY-KEY0002");
 
 var redisOpstions = new RedisCacheOptions
 {
-    Configuration = "127.0.0.1:6379",
+    Configuration = "cache:6379",
     InstanceName = "cache-1."
 };
 
