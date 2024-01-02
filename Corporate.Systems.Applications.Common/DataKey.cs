@@ -2,10 +2,10 @@
 
 public class DataKey : IDataKey
 {
-    public DataKey(string key)
+    public DataKey(string identifier)
     {
-        Key = key;
+        Identifier = identifier;
     }
 
-    public string Key { get; init; }
+    public string Identifier { get; init; }
 }

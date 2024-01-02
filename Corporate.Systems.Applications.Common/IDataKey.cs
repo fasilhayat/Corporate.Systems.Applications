@@ -2,6 +2,6 @@
 
 public interface IDataKey
 {
-    string Key { get; init; }
+    string Identifier { get; init; }
 }
 
