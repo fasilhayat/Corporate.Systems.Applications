@@ -4,6 +4,24 @@ using Corporate.Systems.Applications.Application2.Model;
 using MongoDB.Bson;
 using MongoDB.Driver;
 
+/* FROM HOME
+ _dbClient = new MongoClient("mongodb://localhost:27017/");
+ _database = _dbClient.GetDatabase("technical-repo");
+ _collection = _database.GetCollection<BsonDocument>("cachedata");
+
+ // INSERT EXAMPLE
+    var serialized = JsonSerializer.Serialize(o);
+    var document = new BsonDocument
+    {
+        { "CacheKey", key.Identifier },
+        { "Type", o.GetType().ToString() },
+        { "Created", DateTime.Now.ToString(CultureInfo.InvariantCulture) },
+        { "Expiry", DateTime.Now.AddMonths(6).ToString(CultureInfo.InvariantCulture)},
+        { "Data", serialized }
+    };
+    _collection.InsertOne(document);
+*/
+
 Console.WriteLine("Hello, MongoDB!");
 const string connectionString = "mongodb://mongodb:27017/";
 
