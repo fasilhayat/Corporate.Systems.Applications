@@ -1,11 +1,10 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
+using Corporate.Systems.Applications.Application2.Model;
 using MongoDB.Bson;
 using MongoDB.Driver;
 
 Console.WriteLine("Hello, MongoDB!");
-
-
 const string connectionString = "mongodb://mongodb:27017/";
 
 // Create a MongoClient object by using the connection string
@@ -13,7 +12,6 @@ var client = new MongoClient(connectionString);
 
 //Use the MongoClient to access the server
 var database = client.GetDatabase("local");
-
 var dbList = client.ListDatabases().ToList();
 
 Console.WriteLine("The list of databases on this server is: ");
@@ -22,6 +20,14 @@ foreach (var db in dbList)
 {
     Console.WriteLine(db);
 }
+
+// Data
+var data = new Pensionsdata
+{
+    Id = "cache-1.MY-KEY0002",
+    Data = "klumpdata3"
+};
+var bsonDocument = data.ToBsonDocument();
 
 
 //get mongodb collection
