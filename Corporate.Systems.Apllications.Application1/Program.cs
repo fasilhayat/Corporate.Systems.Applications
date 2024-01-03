@@ -7,7 +7,7 @@ using Microsoft.Extensions.Caching.StackExchangeRedis;
 
 Console.WriteLine("Hello, World! This is Application1 running");
 
-IDataKey dataKey = new DataKey("MY-KEY0002");
+IDataKey dataKey = new DataKey("MY-KEY0003");
 
 var redisOpstions = new RedisCacheOptions
 {
