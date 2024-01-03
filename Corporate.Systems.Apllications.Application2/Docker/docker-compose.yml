@@ -1,9 +1,5 @@
 version: '2'
-
 services:
-  app:
-    image: console-app2-demo
-
   mongo:
     image: mongo
     restart: always
@@ -11,3 +7,7 @@ services:
       - 27017:27017
     networks:
      - default
+    hostname: mongodb
+
+  app:
+    image: console-app2-demo
