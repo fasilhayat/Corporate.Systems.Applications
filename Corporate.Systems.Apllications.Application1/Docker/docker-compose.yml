@@ -22,8 +22,8 @@ services:
         delay: 5s
         max_attempts: 3
         window: 60s 
-  app:
-    image: console-app-demo
+  app1:
+    image: console-app1-demo
     depends_on:
     - cache
   

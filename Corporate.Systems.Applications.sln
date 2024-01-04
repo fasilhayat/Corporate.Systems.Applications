@@ -11,6 +11,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Corporate.Systems.Applicati
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Corporate.Systems.Applications.Common", "Corporate.Systems.Applications.Common\Corporate.Systems.Applications.Common.csproj", "{0C6BFB15-308F-4F39-BFBD-ABB79176432B}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{20A10161-E739-4050-912D-322FC4E7C098}"
+	ProjectSection(SolutionItems) = preProject
+		Install.ps1 = Install.ps1
+		Uninstall.ps1 = Uninstall.ps1
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
