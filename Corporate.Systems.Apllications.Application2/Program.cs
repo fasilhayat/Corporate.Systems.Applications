@@ -50,7 +50,7 @@ var data = new Pensionsdata
 var serialized = JsonSerializer.Serialize(data);
 var document = new BsonDocument
 {
-    { "Key", key.Identifier },
+    { "_id", key.Identifier },
     { "Type", data.GetType().ToString() },
     { "Created", DateTime.Now.ToString(CultureInfo.InvariantCulture) },
     { "Expiry", DateTime.Now.AddMonths(6).ToString(CultureInfo.InvariantCulture)},
