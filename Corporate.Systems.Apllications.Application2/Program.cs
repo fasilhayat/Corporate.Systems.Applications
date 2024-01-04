@@ -53,30 +53,3 @@ var document = new BsonDocument
     { "Data", serialized }
 };
 collection.InsertOne(document);
-
-/*
- IN MONGOSHELL
-# mongosh
-> show dbs
-admin   40.00 KiB
-config  60.00 KiB
-local   80.00 KiB
-
-> use local
-switched to db local
-local> show collections
-pensionsdata
-startup_log
-local> db.pensionsdata.find();
-[
-  {
-    _id: ObjectId("659670271d7faea45f4913a4"),
-    Key: 'cache-1.MY-KEY0003',
-    Type: 'Corporate.Systems.Applications.Application2.Model.Pensionsdata',
-    Created: '01/04/2024 08:45:27',
-    Expiry: '07/04/2024 08:45:27',
-    Data: '{"Id":"cache-1.MY-KEY0003","Data":"klumpdata3"}'
-  }
-]
-local> 
- */
