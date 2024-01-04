@@ -46,7 +46,6 @@ var data = new Pensionsdata
     Data = "klumpdata3"
 };
 
-// INSERT EXAMPLE
 var serialized = JsonSerializer.Serialize(data);
 var document = new BsonDocument
 {
@@ -56,4 +55,13 @@ var document = new BsonDocument
     { "Expiry", DateTime.Now.AddMonths(6).ToString(CultureInfo.InvariantCulture)},
     { "Data", serialized }
 };
-collection.InsertOne(document);
+
+// INSERT EXAMPLE
+//collection.InsertOne(document);
+
+// UPDATE / INSERT EXAMPLE (updates if data exists)
+collection.ReplaceOne(Builders<BsonDocument>.Filter.Eq("_id", key.Identifier), document,
+    new ReplaceOptions
+    {
+        IsUpsert = true
+    });
