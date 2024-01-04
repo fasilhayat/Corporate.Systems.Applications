@@ -9,5 +9,5 @@ services:
      - default
     hostname: mongodb
 
-  app:
+  app2:
     image: console-app2-demo
