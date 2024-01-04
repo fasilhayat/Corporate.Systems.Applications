@@ -24,14 +24,18 @@ foreach (var db in dbList)
     Console.WriteLine(db);
 }
 
-// Create collection
-await database.CreateCollectionAsync("pensionsdata", new CreateCollectionOptions
+// Create collection if does not exist.
+var collectionExists = database.ListCollectionNames().ToList().Contains("pensionsdata");
+if (!collectionExists)
 {
-    Capped = true,
-    MaxSize = 1024,
-    MaxDocuments = 10,
-});
-
+    // Create collection
+    await database.CreateCollectionAsync("pensionsdata", new CreateCollectionOptions
+    {
+        Capped = true,
+        MaxSize = 1024,
+        MaxDocuments = 10,
+    });
+}
 var collection = database.GetCollection<BsonDocument>("pensionsdata");
 
 // Data
