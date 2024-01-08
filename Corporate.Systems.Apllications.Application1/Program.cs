@@ -1,6 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-
-using Corporate.Systems.Applications.Application1.Redis.Adapter;
+﻿using Corporate.Systems.Applications.Application1.Redis.Adapter;
 using Corporate.Systems.Applications.Common;
 using Microsoft.Extensions.Caching.Distributed;
 using Microsoft.Extensions.Caching.StackExchangeRedis;
