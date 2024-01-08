@@ -2,7 +2,6 @@
 
 using Common;
 using Microsoft.Extensions.Caching.Distributed;
-using StackExchange.Redis;
 using System.Text.Json;
 
 internal class DataAccess : IDataAccess
@@ -24,7 +23,7 @@ internal class DataAccess : IDataAccess
         this.ClearCachedData(key);
     }
 
-    public T GetCachedData<T>(IDataKey dataKey) where T : class
+    public T? GetCachedData<T>(IDataKey dataKey) where T : class
     {
         var document = _cache.Get(dataKey.Identifier);
         var cahchedData = document != null ? JsonSerializer.Deserialize<T>(document) : null;
