@@ -1,0 +1,4 @@
+version: '2'
+services:
+  app4:
+    image: rest-app4-demo
