@@ -9,4 +9,3 @@ docker build -f Corporate.Systems.Applications.Application4\Docker\Dockerfile --
 docker compose -f Corporate.Systems.Applications.Application1\Docker\docker-compose.yml -p app1 up -d --build 
 docker compose -f Corporate.Systems.Applications.Application2\Docker\docker-compose.yml -p app2 up -d --build
 docker compose -f Corporate.Systems.Applications.Application4\Docker\docker-compose.yml -p app4 up -d --build
-
