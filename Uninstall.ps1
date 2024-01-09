@@ -10,6 +10,11 @@ docker stop app2-mongo-1
 docker rm -f app2-app2-1
 docker rm -f app2-mongo-1
 
+# STOP AND REMOVE APP4 CONTAINERS
+docker stop app4-app4-1
+docker rm -f app4-app4-1
+
 # REMOVE IMAGES
 docker rmi console-app1-demo
 docker rmi console-app2-demo
+docker rmi rest-app4-demo

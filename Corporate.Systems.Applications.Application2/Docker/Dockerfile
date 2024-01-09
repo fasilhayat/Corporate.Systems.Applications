@@ -5,11 +5,11 @@ WORKDIR /app
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
-COPY ["Corporate.Systems.Apllications.Application2/Corporate.Systems.Applications.Application2.csproj", "Corporate.Systems.Apllications.Application2/"]
+COPY ["Corporate.Systems.Applications.Application2/Corporate.Systems.Applications.Application2.csproj", "Corporate.Systems.Applications.Application2/"]
 COPY ["Corporate.Systems.Applications.Common/Corporate.Systems.Applications.Common.csproj", "Corporate.Systems.Applications.Common/"]
-RUN dotnet restore "Corporate.Systems.Apllications.Application2/Corporate.Systems.Applications.Application2.csproj"
+RUN dotnet restore "Corporate.Systems.Applications.Application2/Corporate.Systems.Applications.Application2.csproj"
 COPY . .
-WORKDIR "/src/Corporate.Systems.Apllications.Application2"
+WORKDIR "/src/Corporate.Systems.Applications.Application2"
 RUN dotnet build "Corporate.Systems.Applications.Application2.csproj" -c Release -o /app/build
 
 FROM build AS publish
