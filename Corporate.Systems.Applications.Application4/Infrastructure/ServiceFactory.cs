@@ -2,6 +2,7 @@
 using System.Text;
 using System.Text.Json;
 using Corporate.Application.Services.Config;
+using Corporate.Systems.Applications.Application4.Config;
 
 namespace Corporate.Systems.Applications.Application4.Infrastructure;
 

@@ -1,6 +1,6 @@
 ﻿using Corporate.Systems.Applications.Application4.Model.Membership;
 
-namespace Corporate.Application.Services.Services.Interfaces;
+namespace Corporate.Systems.Applications.Application4.Integrations.Interfaces;
 
 public interface IUserService   
 {

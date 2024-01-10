@@ -1,8 +1,9 @@
 using Corporate.Application.Services.Config;
-using Corporate.Application.Services.Services.Interfaces;
 using Corporate.Systems.Applications.Application4.Infrastructure;
 using Corporate.Systems.Applications.Application4.Integrations;
 using System.Net;
+using Corporate.Systems.Applications.Application4.Config;
+using Corporate.Systems.Applications.Application4.Integrations.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 

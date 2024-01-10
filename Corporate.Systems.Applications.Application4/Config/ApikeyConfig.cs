@@ -1,6 +1,6 @@
 ﻿using Corporate.Application.Services.Config.Interfaces;
 
-namespace Corporate.Application.Services.Config;
+namespace Corporate.Systems.Applications.Application4.Config;
 
 public class ApikeyConfig : IApikeyConfig
 {

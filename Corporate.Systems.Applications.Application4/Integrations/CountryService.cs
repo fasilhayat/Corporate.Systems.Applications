@@ -1,5 +1,5 @@
-﻿using Corporate.Application.Services.Services.Interfaces;
-using Corporate.Systems.Applications.Application4.Infrastructure;
+﻿using Corporate.Systems.Applications.Application4.Infrastructure;
+using Corporate.Systems.Applications.Application4.Integrations.Interfaces;
 using Corporate.Systems.Applications.Application4.Model.Geography;
 
 namespace Corporate.Systems.Applications.Application4.Integrations;

@@ -1,4 +1,6 @@
-﻿namespace Corporate.Application.Services.Config;
+﻿using Corporate.Systems.Applications.Application4.Config;
+
+namespace Corporate.Application.Services.Config;
 
 public class UserServiceConfig
 {
