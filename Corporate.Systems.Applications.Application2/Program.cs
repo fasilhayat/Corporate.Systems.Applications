@@ -31,9 +31,7 @@ if (!collectionExists)
     // Create collection
     await database.CreateCollectionAsync("pensionsdata", new CreateCollectionOptions
     {
-        Capped = true,
-        MaxSize = 1024,
-        MaxDocuments = 10,
+        Capped = false
     });
 }
 var collection = database.GetCollection<BsonDocument>("pensionsdata");
