@@ -2,5 +2,13 @@ version: '2'
 services:
   app4:
     image: rest-app4-demo
+    volumes:
+       - ../:/https/
+    env_file: 
+       - ../env.secrets
     ports:
-      - "7005:7005"
+      - "8181:80"
+      - "443:443"
+    networks:
+      - default
+    hostname: rest-app4-demo
