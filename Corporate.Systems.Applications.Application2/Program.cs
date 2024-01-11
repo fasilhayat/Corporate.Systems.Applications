@@ -6,7 +6,7 @@ using MongoDB.Bson;
 using MongoDB.Driver;
 
 Console.WriteLine("Hello, MongoDB!");
-const string connectionString = "mongodb://mongodb:27018";
+const string connectionString = "mongodb://mongodb:27017/";
 
 // Create a MongoClient object by using the connection string
 var dbClient = new MongoClient(connectionString);
