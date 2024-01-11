@@ -16,7 +16,6 @@ var database = dbClient.GetDatabase("local");
 var dbList = dbClient.ListDatabases().ToList();
 
 Console.WriteLine("The list of databases on this server is: ");
-
 foreach (var db in dbList)
 {
     Console.WriteLine(db);
@@ -53,7 +52,7 @@ var document = new BsonDocument
 };
 
 // INSERT EXAMPLE
-collection.InsertOne(document);
+//collection.InsertOne(document);
 
 // UPDATE / INSERT EXAMPLE (updates if data exists)
 collection.ReplaceOne(Builders<BsonDocument>.Filter.Eq("_id", key.Identifier), document,
