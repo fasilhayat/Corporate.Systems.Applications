@@ -1,6 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-
-using System.Globalization;
+﻿using System.Globalization;
 using System.Text.Json;
 using Corporate.Systems.Applications.Application2.Model;
 using Corporate.Systems.Applications.Common;
@@ -8,7 +6,7 @@ using MongoDB.Bson;
 using MongoDB.Driver;
 
 Console.WriteLine("Hello, MongoDB!");
-const string connectionString = "mongodb://mongodb:27017/";
+const string connectionString = "mongodb://mongodb:27018";
 
 // Create a MongoClient object by using the connection string
 var dbClient = new MongoClient(connectionString);
@@ -55,7 +53,7 @@ var document = new BsonDocument
 };
 
 // INSERT EXAMPLE
-//collection.InsertOne(document);
+collection.InsertOne(document);
 
 // UPDATE / INSERT EXAMPLE (updates if data exists)
 collection.ReplaceOne(Builders<BsonDocument>.Filter.Eq("_id", key.Identifier), document,
@@ -63,3 +61,27 @@ collection.ReplaceOne(Builders<BsonDocument>.Filter.Eq("_id", key.Identifier), d
     {
         IsUpsert = true
     });
+
+var documents = await collection.Find(_ => true).ToListAsync();
+Console.WriteLine($"documents: {documents.Count}");
+
+//// GraphQL Query example
+//Schema.For(@"
+//  type User {
+//      name: String,
+//      gender: String
+//  }
+
+//  type Query {
+//      hello: String,
+//      users: [User]
+//  }
+//  ", _ =>
+//{
+//    _.Types.Include<UserQuery>();
+//});
+//var json = schema.Execute(_ =>
+//{
+//    _.Query = "{ hello }";
+//    _.Root = root;
+//});
