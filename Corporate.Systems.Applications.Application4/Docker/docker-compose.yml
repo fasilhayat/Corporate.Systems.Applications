@@ -7,7 +7,7 @@ services:
     env_file: 
        - ../env.secrets
     ports:
-      - "8181:80"
+      - "80:80"
       - "443:443"
     networks:
       - default

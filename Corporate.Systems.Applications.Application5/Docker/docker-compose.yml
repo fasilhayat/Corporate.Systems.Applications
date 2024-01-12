@@ -11,8 +11,8 @@ services:
     env_file: 
        - ../env.secrets
     ports:
-      - "8282:5000"
-      - "8383:5001"
+      - "5000:5000"
+      - "5001:5001"
     networks:
       - default
     hostname: graphql-app5-demo
@@ -20,8 +20,8 @@ services:
     image: redis:latest
     restart: always
     ports:
-      - '8000:8000'
-      - '6380:6380'
+      - '8000:8001'
+      - '6380:6379'
     networks:
      - default
     hostname: cache
