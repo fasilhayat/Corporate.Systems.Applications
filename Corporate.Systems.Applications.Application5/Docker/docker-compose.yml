@@ -1,0 +1,39 @@
+version: '2'
+networks:
+  default:
+    ipam:
+      driver: default
+services:
+  app5:
+    image: graphql-app5-demo
+    volumes:
+       - ../:/https/
+    env_file: 
+       - ../env.secrets
+    ports:
+      - "8282:5000"
+      - "8383:5001"
+    networks:
+      - default
+    hostname: graphql-app5-demo
+  cache:
+    image: redis:latest
+    restart: always
+    ports:
+      - '8000:8000'
+      - '6380:6380'
+    networks:
+     - default
+    hostname: cache
+        
+    volumes: 
+      - cache:/data
+    deploy:
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+        window: 60s
+volumes:
+  cache:
+    driver: local
