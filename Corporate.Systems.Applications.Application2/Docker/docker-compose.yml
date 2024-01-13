@@ -8,8 +8,8 @@ services:
     networks:
      - default
     hostname: mongodb
-    #volumes:
-    #- ./db:/data/db:rw
+    volumes:
+    - ./db:/data/db:rw
 
   app2:
     image: console-app2-demo
