@@ -363,3 +363,6 @@ MigrationBackup/
 FodyWeavers.xsd
 /.vscode
 /Corporate.Systems.Applications.Application4/aspnetapp.pfx
+
+# MongoDB | FMH
+**/Docker/db/
