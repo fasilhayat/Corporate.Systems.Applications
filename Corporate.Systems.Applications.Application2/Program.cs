@@ -33,11 +33,11 @@ if (!collectionExists)
 var collection = database.GetCollection<BsonDocument>("pensionsdata");
 
 // Data
-IDataKey key = new DataKey("cache-1.MY-KEY0003");
+IDataKey key = new DataKey("cache-1.MY-KEY0001");
 var data = new Pensionsdata
 {
-    Id = "cache-1.MY-KEY0003",
-    Data = "klumpdata3"
+    Id = "cache-1.MY-KEY0001",
+    Data = "klumpdata1"
 };
 
 var serialized = JsonSerializer.Serialize(data);

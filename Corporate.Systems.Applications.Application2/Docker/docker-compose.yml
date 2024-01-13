@@ -9,7 +9,11 @@ services:
      - default
     hostname: mongodb
     volumes:
-    - ./db:/data/db:rw
-
+    - mongo:/data/db:rw
   app2:
     image: console-app2-demo
+    depends_on:
+    - mongo
+volumes:
+  mongo:
+    driver: local
