@@ -2,7 +2,7 @@
 
 namespace Corporate.Systems.Applications.Application5.Redis.Adapter;
 
-public interface IDataAccess : IDeletionPolicy
+public interface IDbContext : IDeletionPolicy
 {
     T? GetData<T>(IDataKey key) where T : class;
 

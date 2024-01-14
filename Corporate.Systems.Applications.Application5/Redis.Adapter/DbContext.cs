@@ -4,12 +4,12 @@ using Common;
 using Microsoft.Extensions.Caching.Distributed;
 using System.Text.Json;
 
-internal class DataAccess : IDataAccess
+internal class DbContext : IDbContext
 {
     private readonly IDistributedCache _cache;
     private readonly DistributedCacheEntryOptions _cachePolicy;
 
-    public DataAccess(IDistributedCache cache, DistributedCacheEntryOptions cachePolicy)
+    public DbContext(IDistributedCache cache, DistributedCacheEntryOptions cachePolicy)
     {
         _cache = cache;
         _cachePolicy = cachePolicy;

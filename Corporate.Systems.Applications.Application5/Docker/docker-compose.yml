@@ -16,7 +16,7 @@ services:
       - default
     hostname: graphql-app5-demo
   cache:
-    image: redis:latest
+    image: redis/redis-stack-server:latest
     restart: always
     ports:
       - '8000:8001'

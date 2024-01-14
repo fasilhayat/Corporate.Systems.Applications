@@ -1,10 +1,19 @@
+using Corporate.Systems.Applications.Application5.Model;
 using GraphQL.AspNet.Attributes;
 using GraphQL.AspNet.Controllers;
+using Microsoft.Extensions.Caching.Distributed;
 
 namespace Corporate.Systems.Applications.Application5.Controllers;
 
 public class UserdataController : GraphController
 {
+    private readonly IDistributedCache _distributedCache;
+
+    public UserdataController(IDistributedCache distributedCache)
+    {
+        _distributedCache = distributedCache;
+    }
+
     [QueryRoot("users")]
     public IEnumerable<User> RetrieveUsers()
     {
@@ -12,25 +21,25 @@ public class UserdataController : GraphController
         {
             new()
             {
-                Id = 1,
+                DataKey = new("94744e79-6da7"),
                 Name = "Noble Fulton",
-                Guid = "94744e79-6da7-426b-ab70-110b2719114b",
+                Guid = Guid.NewGuid(),
                 Age = 25,
                 Gender = "Male"
             },
             new()
             {
-                Id = 2,
+                DataKey = new("386a9a65-6dff"),
                 Name = "Renee Morrow",
-                Guid = "386a9a65-6dff-4bf9-b45a-7d7e07f14c77",
+                Guid = Guid.NewGuid(),
                 Age = 36,
                 Gender = "Male"
             },
             new()
             {
-                Id = 3,
+                DataKey = new("1e00db63-144c"),
                 Name = "Juliet Lynch",
-                Guid = "1e00db63-144c-4661-aad8-6e7a55291b9f",
+                Guid = Guid.NewGuid(),
                 Age = 18,
                 Gender = "Female"
             }
@@ -38,27 +47,14 @@ public class UserdataController : GraphController
     }
 
     [QueryRoot("user")]
-    public User? RetrieveUser(int id)
+    public User? RetrieveUser(string id)
     {
-        return RetrieveUsers().SingleOrDefault(x => x.Id == id);
+        return RetrieveUsers().SingleOrDefault(x => x.DataKey?.Identifier == id);
     }
 
     [QueryRoot("usersearch")]
-    public User? RetrieveUser(string name)
+    public User? SearchUser(string name)
     {
         return RetrieveUsers().SingleOrDefault(x => x.Name != null && x.Name.Contains(name));
     }
-}
-
-public class User
-{
-    public int Id { get; init; }
-
-    public string? Guid { get; init; }
-
-    public string? Name { get; init; }
-
-    public string? Gender { get; init; }
-
-    public int Age { get; init; }
 }
