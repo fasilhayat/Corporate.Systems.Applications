@@ -13,31 +13,29 @@ var config = builder.Configuration;
 RedisConnection redisConnection = new();
 config.GetSection("RedisConnection").Bind(redisConnection);
 
-//services.AddSingleton<IConnectionMultiplexer>(option =>
-//    ConnectionMultiplexer.Connect(new ConfigurationOptions
-//    {
-//        EndPoints = { $"{redisConnection.Host}:{redisConnection.Port}" },
-//        AbortOnConnectFail = false,
-//        Ssl = redisConnection.IsSsl,
-//        Password = redisConnection.Password
-//    }));
+services.AddSingleton<IConnectionMultiplexer>(option =>
+    ConnectionMultiplexer.Connect(new ConfigurationOptions
+    {
+        EndPoints = { $"{redisConnection.Host}:{redisConnection.Port}" },
+        AbortOnConnectFail = false,
+        Ssl = redisConnection.IsSsl,
+        Password = redisConnection.Password
+    }));
 
+var redisOpstions = new RedisCacheOptions
+{
+    Configuration = "cache:6379",
+    InstanceName = "App5-redis."
+};
 builder.Services.AddStackExchangeRedisCache(options =>
 {
-    options.Configuration = "cache:6380";//builder.Configuration.GetConnectionString("RedisConn");
+    options.Configuration = "cache:6379";
     options.InstanceName = "App5-redis.";
 });
 
 var cachePolicy = new DistributedCacheEntryOptions
 {
     AbsoluteExpirationRelativeToNow = TimeSpan.FromMinutes(5000),
-};
-
-
-var redisOpstions = new RedisCacheOptions
-{
-    Configuration = "cache:6379",
-    InstanceName = "App5-redis."
 };
 
 
