@@ -1,15 +1,14 @@
+using Corporate.Systems.Applications.Application5.Redis.Adapter;
 using GraphQL.AspNet.Configuration;
-using Microsoft.Extensions.Caching.Distributed;
-using Microsoft.Extensions.Caching.StackExchangeRedis;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Add redis
 builder.Services.AddStackExchangeRedisCache(options =>
 {
-    options.Configuration = builder.Configuration.GetValue<string>("CacheSettings:RedisCache");
+    options.Configuration = builder.Configuration.GetValue<string>("Redis:Connection");
 });
-builder.Services.Add(ServiceDescriptor.Singleton<IDistributedCache, RedisCache>());
-
+builder.Services.AddTransient<IDbContext, DbContext>();
 
 // Add graphql services to the DI container
 builder.Services.AddGraphQL();

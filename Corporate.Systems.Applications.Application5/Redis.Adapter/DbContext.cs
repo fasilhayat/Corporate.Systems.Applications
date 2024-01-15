@@ -15,9 +15,6 @@ internal class DbContext : IDbContext
 
     public void Delete(IDataKey key)
     {
-        // Remove datakey from datastore
-        //ConnectionMultiplexer redis = ConnectionMultiplexer.Connect("127.0.0..1:6379");
-        //var server = redis.GetServer("127.0.0..1:6379");
         this.ClearData(key);
     }
 
