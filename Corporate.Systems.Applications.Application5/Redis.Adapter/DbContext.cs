@@ -7,12 +7,10 @@ using System.Text.Json;
 internal class DbContext : IDbContext
 {
     private readonly IDistributedCache _cache;
-    private readonly DistributedCacheEntryOptions _cachePolicy;
-
-    public DbContext(IDistributedCache cache, DistributedCacheEntryOptions cachePolicy)
+    
+    public DbContext(IDistributedCache cache)
     {
         _cache = cache;
-        _cachePolicy = cachePolicy;
     }
 
     public void Delete(IDataKey key)
@@ -32,8 +30,12 @@ internal class DbContext : IDbContext
 
     public T SaveData<T>(IDataKey key, T o) where T : class
     {
+        var cachePolicy = new DistributedCacheEntryOptions
+        {
+            AbsoluteExpirationRelativeToNow = TimeSpan.FromMinutes(5000),
+        };
         var serializedData = JsonSerializer.SerializeToUtf8Bytes(o);
-        _cache.Set(key.Identifier, serializedData, _cachePolicy);
+        _cache.Set(key.Identifier, serializedData, cachePolicy);
         return o;
     }
 

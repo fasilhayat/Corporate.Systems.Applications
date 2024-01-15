@@ -25,3 +25,6 @@ docker rm -f app5-cache-1
 #docker rmi console-app2-demo
 #docker rmi rest-app4-demo
 docker rmi graphql-app5-demo
+
+# REMOVE ALL UNUSED VOLUMES
+docker volume prune -a --force
