@@ -1,33 +1,64 @@
-{
-  "DataKey": { "Identifier": "App5-redis.301fd66f-f711" },
-  "Index": 1,
-  "Guid": "38ad8a28-0efa-4593-a518-92c1a0245268",
-  "IsActive": false,
-  "Balance": "Some money as text",
-  "Picture": "Picture",
-  "Age": 35,
-  "EyeColor": "Brown",
-  "Name": "Garran Fas",
-  "Gender": "Male",
-  "Company": "Company name",
-  "Email": "malik@fas.dk",
-  "Phone": "\u002B452585454",
-  "Address": "Address 1",
-  "About": "A long story",
-  "Registered": "Registered",
-  "Latitude": -77.0364,
-  "Longitude": 38.8951,
-  "Tags": [ "TAG1", "TAG2", "TAG3" ],
-  "Friends": [
-    {
-      "Id": 1,
-      "Name": "Friendname"
-    },
-    {
-      "Id": 2,
-      "Name": "Friendname2"
-    }
-  ],
-  "Greeting": "A greeting",
-  "FavoriteFruit": "Kiwi"
-}
+[
+  {
+    "DataKey": { "Identifier": "App5-redis.301fd66f-f711" },
+    "Index": 1,
+    "Guid": "38ad8a28-0efa-4593-a518-92c1a0245268",
+    "IsActive": false,
+    "Balance": "Some money as text",
+    "Picture": "Picture",
+    "Age": 35,
+    "EyeColor": "Brown",
+    "Name": "Garran Fas",
+    "Gender": "Male",
+    "Company": "Company name",
+    "Email": "malik@fas.dk",
+    "Phone": "\u002B452585454",
+    "Address": "Address 1",
+    "About": "A long story",
+    "Registered": "Registered",
+    "Latitude": -77.0364,
+    "Longitude": 38.8951,
+    "Tags": [ "TAG1", "TAG2", "TAG3" ],
+    "Friends": [
+      {
+        "Id": 1,
+        "Name": "Friendname"
+      },
+      {
+        "Id": 2,
+        "Name": "Friendname2"
+      }
+    ],
+    "Greeting": "A greeting",
+    "FavoriteFruit": "Kiwi"
+  },
+  {
+    "DataKey": { "Identifier": "App5-redis.301fd66f-f712" },
+    "Index": 1,
+    "Guid": "38ad8a28-0efa-4593-a518-92c1a0245262",
+    "IsActive": false,
+    "Balance": "Some money as text2",
+    "Picture": "Picture2",
+    "Age": 35,
+    "EyeColor": "Green",
+    "Name": "Garran",
+    "Gender": "Male",
+    "Company": "Company name2",
+    "Email": "malik@fas.dk",
+    "Phone": "\u002B452585454",
+    "Address": "Address 2",
+    "About": "A long story",
+    "Registered": "Registered",
+    "Latitude": -77.0364,
+    "Longitude": 38.8951,
+    "Tags": [ "TAG1", "TAG2", "TAG3" ],
+    "Friends": [
+      {
+        "Id": 1,
+        "Name": "Friendname"
+      }
+    ],
+    "Greeting": "A greeting",
+    "FavoriteFruit": "Kiwi"
+  }
+]
