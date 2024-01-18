@@ -15,11 +15,12 @@ internal class DataAccess : IDataAccess
         _cachePolicy = cachePolicy;
     }
 
+    /// <summary>
+    /// GDPR-Compliant
+    /// </summary>
+    /// <param name="key"></param>
     public void Delete(IDataKey key)
     {
-        // Remove datakey from datastore
-        //ConnectionMultiplexer redis = ConnectionMultiplexer.Connect("127.0.0..1:6379");
-        //var server = redis.GetServer("127.0.0..1:6379");
         this.ClearCachedData(key);
     }
 
