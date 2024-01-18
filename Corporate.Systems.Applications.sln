@@ -5,7 +5,7 @@ VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Corporate.Systems.Applications.Application1", "Corporate.Systems.Applications.Application1\Corporate.Systems.Applications.Application1.csproj", "{CDC51B3C-E1DB-4417-9541-B155A2E7E18A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Corporate.Systems.Applications.Master", "Corporate.Systems.Applications.Application2\Corporate.Systems.Applications.Master.csproj", "{891F5D07-8034-4D57-A88D-D90FEC10847E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Corporate.Systems.Applications.Master", "Corporate.Systems.Applications.Master\Corporate.Systems.Applications.Master.csproj", "{891F5D07-8034-4D57-A88D-D90FEC10847E}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Corporate.Systems.Applications.Application3", "Corporate.Systems.Applications.Application3\Corporate.Systems.Applications.Application3.csproj", "{76403969-4A42-472F-B22A-49F57858037D}"
 EndProject

@@ -1,12 +1,19 @@
 version: '2'
 services:
-  postgres:
-    image: postgres:latest
+  mongo:
+    image: mongo
+    restart: always
     ports:
-      - 5432:5432
+      - 27017:27017
+    networks:
+     - default
+    hostname: mongodb
     volumes:
-      - ~/apps/postgres:/var/lib/postgresql/data
-    environment:
-      - POSTGRES_PASSWORD=myp@ssword
-      - POSTGRES_USER=my_user
-      - POSTGRES_DB=master_db
+    - mongo:/data/db:rw
+  app:
+    image: console-master-demo
+    depends_on:
+    - mongo
+volumes:
+  mongo:
+    driver: local

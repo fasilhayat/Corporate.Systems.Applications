@@ -1,7 +1,7 @@
 Start Windows Powershell or Right-click on the project file and 'Open in Termnial'
 
 C:~\source\repos\Corporate.Systems.Applications\Corporate.Systems.Apllications.Master\Docker\
-$ docker-compose -p master up --build
+$ docker-compose -p app1 up --build
 
 To stop
 $ docker-compose stop
