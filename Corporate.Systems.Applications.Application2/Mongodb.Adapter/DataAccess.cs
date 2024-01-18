@@ -1,6 +1,6 @@
-﻿namespace Corporate.Systems.Applications.Application2.Mongodb.Adapter;
+﻿using Corporate.Systems.Applications.Common;
 
-using Common;
+namespace Corporate.Systems.Applications.Master.Mongodb.Adapter;
 
 internal class DataAccess : IDeletionPolicy
 {

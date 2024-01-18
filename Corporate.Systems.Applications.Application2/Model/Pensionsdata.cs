@@ -1,4 +1,4 @@
-﻿namespace Corporate.Systems.Applications.Application2.Model;
+﻿namespace Corporate.Systems.Applications.Master.Model;
 
 public class Pensionsdata
 {

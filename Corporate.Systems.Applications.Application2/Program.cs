@@ -1,7 +1,7 @@
 ﻿using System.Globalization;
 using System.Text.Json;
-using Corporate.Systems.Applications.Application2.Model;
 using Corporate.Systems.Applications.Common;
+using Corporate.Systems.Applications.Master.Model;
 using MongoDB.Bson;
 using MongoDB.Driver;
 

@@ -10,8 +10,8 @@ services:
     hostname: mongodb
     volumes:
     - mongo:/data/db:rw
-  app2:
-    image: console-app2-demo
+  app:
+    image: console-master-demo
     depends_on:
     - mongo
 volumes:

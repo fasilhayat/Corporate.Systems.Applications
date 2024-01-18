@@ -5,7 +5,7 @@ VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Corporate.Systems.Applications.Application1", "Corporate.Systems.Applications.Application1\Corporate.Systems.Applications.Application1.csproj", "{CDC51B3C-E1DB-4417-9541-B155A2E7E18A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Corporate.Systems.Applications.Application2", "Corporate.Systems.Applications.Application2\Corporate.Systems.Applications.Application2.csproj", "{891F5D07-8034-4D57-A88D-D90FEC10847E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Corporate.Systems.Applications.Master", "Corporate.Systems.Applications.Application2\Corporate.Systems.Applications.Master.csproj", "{891F5D07-8034-4D57-A88D-D90FEC10847E}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Corporate.Systems.Applications.Application3", "Corporate.Systems.Applications.Application3\Corporate.Systems.Applications.Application3.csproj", "{76403969-4A42-472F-B22A-49F57858037D}"
 EndProject
@@ -19,7 +19,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{20A1
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Corporate.Systems.Applications.Application4", "Corporate.Systems.Applications.Application4\Corporate.Systems.Applications.Application4.csproj", "{065D943C-D394-409E-B353-DEC742063263}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Corporate.Systems.Applications.Application5", "Corporate.Systems.Applications.Application5\Corporate.Systems.Applications.Application5.csproj", "{569B765E-7296-47E3-BE6A-7F3F48A4CFCD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Corporate.Systems.Applications.Application5", "Corporate.Systems.Applications.Application5\Corporate.Systems.Applications.Application5.csproj", "{569B765E-7296-47E3-BE6A-7F3F48A4CFCD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
