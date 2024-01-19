@@ -24,9 +24,13 @@
 docker stop kafka-kafka-1
 docker stop kafka-zookeeper-1
 docker stop kafka-kafkadrop-1
+docker stop postgres
+docker stop kafka-dconnect-1
 docker rm -f kafka-kafka-1
 docker rm -f kafka-zookeeper-1
 docker rm -f kafka-kafkadrop-1
+docker rm -f postgres
+docker rm -f kafka-dconnect-1
 
 # REMOVE IMAGES
 #docker rmi console-app1-demo
