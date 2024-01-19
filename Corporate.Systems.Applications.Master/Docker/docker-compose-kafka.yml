@@ -13,7 +13,7 @@ services:
 
 # Kafka single mode
   kafka:
-    image: wurstmeister/kafka:latest
+    image: bitnami/kafka:latest
     restart: "no"
     links:
       - zookeeper
@@ -37,3 +37,30 @@ services:
       - 9000:9000
     depends_on:
       - kafka
+
+  postgres:
+    image: debezium/example-postgres:latest
+    container_name: postgres
+    ports:
+     - 5433:5432
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+
+# Debezium connector
+  dconnect:
+    image: debezium/connect:latest
+    ports:
+      - 8083:8083
+    environment:
+      CONFIG_STORAGE_TOPIC: my_connect_configs
+      OFFSET_STORAGE_TOPIC: my_connect_offsets
+      STATUS_STORAGE_TOPIC: my_connect_statuses
+      BOOTSTRAP_SERVERS: kafka:29092
+    links:
+    - zookeeper
+    - postgres
+    depends_on:
+    - kafka
+    - zookeeper
+    - postgres
