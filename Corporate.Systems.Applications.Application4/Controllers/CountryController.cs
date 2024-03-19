@@ -24,7 +24,16 @@ public class CountryController : ControllerBase
     [TypeFilter(typeof(ControllerFilter))]
     public Country? Get()
     {
-        var result = _countryService.GetCountry("Copenhagen");
+        //var result = _countryService.GetCountry("Copenhagen");
+        var result = new Country
+        {
+            Name = new Name
+            {
+                Official = "Kingdom of Denmark",
+                Common = "Danmark"
+            }
+
+        };
         return result;
     }
 }

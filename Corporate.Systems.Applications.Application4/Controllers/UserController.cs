@@ -27,8 +27,24 @@ public class UserController : ControllerBase
         var result = _userService.GetUsers();
         return new UserCatalog
         {
-            Users = result
+            Users = new List<User>
+            {
+                new()
+                {
+                    Id = 1,
+                    Uid = Guid.NewGuid().ToString(),
+                    Email = "my@email.com",
+                    Firstname = "Fasil Malik",
+                    Lastname = "Hayat",
+                    Password = "p@ssword!",
+                    Username = "Usern@me"
+                }
+            }
         };
+        //return new UserCatalog
+        //{
+        //    Users = result
+        //};
     }
 
     [HttpPost(Name = "AddUser")]

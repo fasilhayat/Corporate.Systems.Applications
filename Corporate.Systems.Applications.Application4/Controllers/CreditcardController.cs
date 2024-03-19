@@ -23,7 +23,15 @@ public class CreditcardController : ControllerBase
     [TypeFilter(typeof(ControllerFilter))]
     public Creditcard Get()
     {
-        var result = _creditcardService.GetCreditcard();
+        //var result = _creditcardService.GetCreditcard();
+        var result = new Creditcard
+        {
+            Id = 1,
+            Credit_Card_ExpiryDate = DateTime.Today,
+            Credit_Card_Number = "01023034585-2024520",
+            Credit_Card_Type = "MasterCard",
+            Uid = Guid.NewGuid().ToString()
+        };
         return result!;
     }
 }

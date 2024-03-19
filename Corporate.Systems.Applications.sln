@@ -21,6 +21,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Corporate.Systems.Applicati
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Corporate.Systems.Applications.Application5", "Corporate.Systems.Applications.Application5\Corporate.Systems.Applications.Application5.csproj", "{569B765E-7296-47E3-BE6A-7F3F48A4CFCD}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Gateway", "Gateway", "{A35AA1E8-6660-438A-8E1A-994EF7388D53}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Forca.ApiGateway", "Forca.ApiGateway\Forca.ApiGateway.csproj", "{9E6803D9-2955-4383-8C00-C494C46D31F6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,9 +55,16 @@ Global
 		{569B765E-7296-47E3-BE6A-7F3F48A4CFCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{569B765E-7296-47E3-BE6A-7F3F48A4CFCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{569B765E-7296-47E3-BE6A-7F3F48A4CFCD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E6803D9-2955-4383-8C00-C494C46D31F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E6803D9-2955-4383-8C00-C494C46D31F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E6803D9-2955-4383-8C00-C494C46D31F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E6803D9-2955-4383-8C00-C494C46D31F6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9E6803D9-2955-4383-8C00-C494C46D31F6} = {A35AA1E8-6660-438A-8E1A-994EF7388D53}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8E6B7758-0EF3-4679-9123-65BB6E0972EC}
