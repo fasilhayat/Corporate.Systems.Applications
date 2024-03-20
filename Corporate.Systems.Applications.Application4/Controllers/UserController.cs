@@ -24,7 +24,12 @@ public class UserController : ControllerBase
     [TypeFilter(typeof(UserFilter))]
     public UserCatalog Get()
     {
-        var result = _userService.GetUsers();
+        //var result = _userService.GetUsers();
+        //{
+        //    Users = result
+        //};
+        //return new UserCatalog
+
         return new UserCatalog
         {
             Users = new List<User>
@@ -41,10 +46,6 @@ public class UserController : ControllerBase
                 }
             }
         };
-        //return new UserCatalog
-        //{
-        //    Users = result
-        //};
     }
 
     [HttpPost(Name = "AddUser")]
