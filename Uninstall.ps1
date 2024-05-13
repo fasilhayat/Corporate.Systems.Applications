@@ -5,8 +5,8 @@ docker rm -f app1-app1-1
 docker rm -f app1-cache-1
 
 # STOP AND REMOVE APP3 CONTAINERS
-docker stop console3-app1-1
-docker rm -f console3-app1-1
+docker stop app3-app3-1
+docker rm -f app3-app3-1
 
 # STOP AND REMOVE APP4 CONTAINERS
 docker stop app4-app4-1
