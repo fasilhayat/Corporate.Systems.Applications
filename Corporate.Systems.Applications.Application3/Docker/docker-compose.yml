@@ -1,0 +1,9 @@
+version: '2'
+services:
+  app3:
+    image: console-app3-demo
+    env_file: 
+       - ../env.secrets
+    networks:
+      - default
+    hostname: console-app3-demo
