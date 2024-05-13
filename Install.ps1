@@ -8,7 +8,7 @@ docker build -f Corporate.Systems.Applications.Application3\Docker\Dockerfile --
 docker build -f Corporate.Systems.Applications.Application4\Docker\Dockerfile --force-rm -t rest-app4-demo .
 
 # Create Application5 graphql-app5 image
-#docker build -f Corporate.Systems.Applications.Application5\Docker\Dockerfile --force-rm -t graphql-app5-demo .
+docker build -f Corporate.Systems.Applications.Application5\Docker\Dockerfile --force-rm -t graphql-app5-demo .
 
 # Create Master console-master image
 #docker build -f Corporate.Systems.Applications.Master\Docker\Dockerfile --force-rm -t console-master-demo .
