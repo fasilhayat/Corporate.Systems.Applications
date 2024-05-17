@@ -1,8 +1,8 @@
 version: '3.4'
 
 services:
-  application.apigateway:
-    image: ${DOCKER_REGISTRY-}Applicationapigateway
+  forca.apigateway:
+    image: ${DOCKER_REGISTRY-}forcaapigateway
     build:
       context: .
-      dockerfile: Gateway/Application.ApiGateway/Dockerfile
+      dockerfile: Gateway/Forca.ApiGateway/Dockerfile
