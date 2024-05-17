@@ -1,7 +1,7 @@
 version: '3.4'
 
 services:
-  forca.apigateway:
+  application.apigateway:
     image: ${DOCKER_REGISTRY-}Applicationapigateway
     build:
       context: .
